@@ -5,7 +5,8 @@
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "scripts": {
-    "build": "build",
+    "prepare": "npm run build && npm run package",
+    "build": "jsii",
     "dev": "run-p dev:*",
     "dev:build": "jsii --watch",
     "dev:docgen": "nodemon -w .jsii -e .jsii --exec npm run docgen",
